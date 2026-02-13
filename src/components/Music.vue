@@ -323,9 +323,11 @@ const updateMusicBlock = () => {
           <li class="music__item-active position-absolute w-100" ref="musicActive"/>
         </ul>
 
-        <div class="music__img-container img-container position-absolute">
-          <img :src="activeTrack.icon" :alt="activeTrack.name" draggable="false">
-        </div>
+        <Transition name="fade">
+          <div :key="activeTrack.id" class="music__img-container img-container position-absolute">
+            <img :src="activeTrack.icon" :alt="activeTrack.name" draggable="false">
+          </div>
+        </Transition>
 
         <div class="music__card position-absolute z-100">
           <Transition name="list">
