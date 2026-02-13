@@ -190,7 +190,7 @@ const closeAbout = () => {
     <div class="main__sticky h-100-vh position-sticky overflow-hidden">
 
       <Transition name="fade">
-        <About v-if="visibleAbout"
+        <About v-show="visibleAbout"
                @open="visibleMusic = false"
                @close="closeAbout"
         />
@@ -198,7 +198,7 @@ const closeAbout = () => {
 
       <KeepAlive>
         <Transition name="fade">
-          <Music v-if="visibleMusic"
+          <Music v-show="visibleMusic"
                  @open="visibleAbout = false"
                  @close="closeMusic"
           />
