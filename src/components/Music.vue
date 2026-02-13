@@ -100,6 +100,8 @@ watch(
 
       if (newVal) {
         checkWidth()
+        updateMusicBlock()
+        updateMenuBlock()
       }
 
       if (newVal && pathRef.value) {
