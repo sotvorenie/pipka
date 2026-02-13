@@ -43,6 +43,11 @@
     right: 0;
     width: 70vw;
     aspect-ratio: 1;
+    transition-duration: .5s;
+
+    &.is-active {
+      scale: 1.05;
+    }
   }
 
   &__card {
@@ -200,6 +205,14 @@
 
     @include hover() {
       background: var(--color-dark-15);
+
+      img {
+        scale: 1.1;
+      }
+    }
+
+    img {
+      transition-duration: .4s;
     }
 
     &.is-active {

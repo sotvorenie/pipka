@@ -102,10 +102,10 @@ watch(
         checkWidth()
         updateMusicBlock()
         updateMenuBlock()
-      }
 
-      if (newVal && pathRef.value) {
-        pathRef.value.setAttribute('d', isPlaying.value ? pausePath : playPath);
+        if (pathRef.value) {
+          pathRef.value.setAttribute('d', isPlaying.value ? pausePath : playPath)
+        }
       }
     }
 )
@@ -193,10 +193,12 @@ const handleTag = (index) => {
 }
 const prevItem = () => {
   activeIndex.value--
+  updateMusicBlock()
   loadAndPlay()
 }
 const nextItem = () => {
   activeIndex.value++
+  updateMusicBlock()
   loadAndPlay()
 }
 
@@ -324,7 +326,10 @@ const updateMusicBlock = () => {
         </ul>
 
         <Transition name="fade">
-          <div :key="activeTrack.id" class="music__img-container img-container position-absolute">
+          <div :key="activeTrack.id"
+               class="music__img-container img-container position-absolute"
+               :class="{'is-active': isPlaying}"
+          >
             <img :src="activeTrack.icon" :alt="activeTrack.name" draggable="false">
           </div>
         </Transition>
