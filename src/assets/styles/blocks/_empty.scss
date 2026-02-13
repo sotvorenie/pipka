@@ -8,6 +8,6 @@
   font-size: rem(32);
 
   &__img {
-    width: 25vw;
+    width: max(25vw, #{rem(200)});
   }
 }

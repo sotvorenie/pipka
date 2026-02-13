@@ -157,9 +157,9 @@ onMounted(async() => {
   })
 
   document.addEventListener('contextmenu', (event) => {
-    // if (!event.target.closest('.ozon__card')) {
-    //   event.preventDefault()
-    // }
+    if (!event.target.closest('.ozon__card')) {
+      event.preventDefault()
+    }
   })
 
   setTimeout(() => {
