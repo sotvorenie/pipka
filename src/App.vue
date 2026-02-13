@@ -189,20 +189,16 @@ const closeAbout = () => {
   <main class="main position-relative" v-else>
     <div class="main__sticky h-100-vh position-sticky overflow-hidden">
 
-      <Transition name="fade">
-        <About v-show="visibleAbout"
-               @open="visibleMusic = false"
-               @close="closeAbout"
-        />
-      </Transition>
+      <About v-show="visibleAbout"
+             @open="visibleMusic = false"
+             @close="closeAbout"
+      />
 
       <KeepAlive>
-        <Transition name="fade">
-          <Music v-show="visibleMusic"
-                 @open="visibleAbout = false"
-                 @close="closeMusic"
-          />
-        </Transition>
+        <Music v-show="visibleMusic"
+               @open="visibleAbout = false"
+               @close="closeMusic"
+        />
       </KeepAlive>
 
       <Space class="z-10"/>

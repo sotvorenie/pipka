@@ -8,6 +8,17 @@
     padding: rem(15);
     z-index: 1000001;
 
+    animation: show .4s linear;
+
+    @keyframes show {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
     &.is-active {
 
       .about__img-container {
