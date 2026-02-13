@@ -1,0 +1,138 @@
+@use '../helpers' as *;
+
+.about {
+
+  &__open {
+    top: 0;
+    right: 0;
+    padding: rem(15);
+    z-index: 1000001;
+
+    &.is-active {
+
+      .about__img-container {
+        width: rem(300);
+        height: rem(300);
+        border-color: var(--color-light);
+      }
+    }
+  }
+  &__img-container {
+    width: rem(60);
+    height: rem(60);
+    border-radius: 50%;
+    transform-origin: right top;
+    transition-duration: .5s;
+    border: 2px solid transparent;
+    z-index: 10;
+
+    @include hover {
+      border-color: var(--color-light);
+    }
+  }
+
+  &__btn {
+    background: transparent;
+    border: 2px solid var(--color-light);
+    border-radius: rem(12);
+    color: var(--color-light) !important;
+    white-space: nowrap;
+    text-align: center;
+    padding: rem(10) rem(20);
+    z-index: 1;
+    transition-duration: 0.4s;
+
+    @include hover {
+      background: var(--color-light);
+      color: var(--color-dark) !important;
+    }
+
+    &.sex {
+      right: rem(290);
+      top: rem(20);
+    }
+    &.drugs {
+      right: rem(330);
+      top: rem(110);
+      transform-origin: right center;
+    }
+    &.bonus {
+      right: rem(315);
+      top: rem(210);
+      transform-origin: right top;
+    }
+  }
+
+  &__content {
+    z-index: 1000000;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,.8);
+  }
+
+  &__list {
+    gap: rem(200);
+  }
+
+  &__title {
+    font-size: rem(52);
+  }
+
+  &__item {
+    @include flex-center();
+
+    width: rem(180);
+    flex-direction: column;
+
+    img {
+      width: rem(150);
+      height: rem(150);
+      object-fit: contain;
+    }
+
+    & * {
+      transition-duration: 0.5s;
+    }
+
+    &.scss span {
+      @include text-outline(var(--color-scss));
+    }
+
+    &.vue span {
+      @include text-outline(var(--color-vue));
+    }
+
+    &.anime span {
+      @include text-outline(var(--color-anime));
+    }
+
+    @include hover {
+
+      img {
+        scale: 1.2;
+        transform: translateY(rem(-20));
+      }
+
+      span {
+        letter-spacing: rem(10);
+      }
+
+      &.scss img {
+        filter: drop-shadow(0 0 52px var(--color-scss));
+      }
+      &.vue img {
+        filter: drop-shadow(0 0 52px var(--color-vue));
+      }
+      &.anime img {
+        filter: drop-shadow(0 0 52px var(--color-anime));
+      }
+    }
+  }
+
+  &__close {
+    gap: rem(30);
+    font-size: rem(24);
+    top: rem(20);
+    left: rem(20);
+  }
+}

@@ -1,0 +1,17 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+@use 'classes';
+@use 'transition';
+
+@use 'blocks/empty';
+
+@use 'blocks/main';
+@use 'blocks/space';
+@use 'blocks/donat';
+@use 'blocks/forest';
+@use 'blocks/ozon';
+@use 'blocks/about';
+@use 'blocks/music';

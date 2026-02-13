@@ -1,0 +1,76 @@
+@use './helpers' as *;
+
+
+.list-enter-active {
+  transition: all 0.5s ease;
+}
+.list-enter-from {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+.list-enter-to {
+  opacity: 1;
+  transform: translateX(0);
+}
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-leave-from {
+  opacity: 1;
+  transform: translateY(0);
+}
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+.list-move {
+  transition: transform 0.5s ease;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.4s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.sex-enter-active, .sex-leave-active {
+  transition: all .5s ease !important;
+}
+.sex-enter-from, .sex-leave-to {
+  transform: translate(rem(300), 0) scale(0);
+}
+.drugs-enter-active, .drugs-leave-active {
+  transition: all .5s ease !important;
+}
+.drugs-enter-from, .drugs-leave-to {
+  transform: translate(rem(300), rem(-100)) scale(0);
+}
+.bonus-enter-active, .bonus-leave-active {
+  transition: all .5s ease !important;
+}
+.bonus-enter-from, .bonus-leave-to {
+  transform: translate(rem(300), rem(-200)) scale(0);
+}
+
+.scale-enter-active, .scale-leave-active {
+  transition: all 0.2s ease;
+}
+.scale-enter-from, .scale-leave-to {
+  scale: 0;
+}
+
+.languages-enter-active,
+.languages-leave-active {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s;
+}
+.languages-enter-from,
+.languages-leave-to {
+  transform: scale(0);
+  opacity: 0;
+}
+.languages-enter-to,
+.languages-leave-from {
+  transform: scale(1);
+  opacity: 1;
+}

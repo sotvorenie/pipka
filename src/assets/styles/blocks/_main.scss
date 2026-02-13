@@ -1,0 +1,20 @@
+@use '../helpers' as *;
+
+.main {
+  height: 1000vh;
+
+  &__sticky {
+    top: 0;
+  }
+
+  &__white {
+    @include abs-x;
+
+    bottom: -10%;
+    width: 30vw;
+    height: 0;
+    background: var(--color-light);
+    border-radius: 100px 100px 0 0;
+    will-change: width, height, bottom;
+  }
+}

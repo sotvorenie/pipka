@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.empty {
+  @include flex-center();
+
+  background: var(--color-dark-15);
+  gap: rem(20);
+  font-size: rem(32);
+
+  &__img {
+    width: 25vw;
+  }
+}

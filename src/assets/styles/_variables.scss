@@ -1,0 +1,24 @@
+@use 'helpers' as *;
+
+:root {
+  --color-light: #FFFFFF;
+
+  --color-dark: #141414;
+  --color-dark-15: #262626;
+
+  --color-accent: #fe7971;
+
+  --color-ozon-blue: #2f62f4;
+  --color-ozon-pink: #ff148a;
+
+  --color-scss: #c24b87;
+  --color-vue: #00b881;
+  --color-anime: #ff4247;
+
+  --font-family-base: 'Montserrat', sans-serif;
+
+  --container-width: #{rem(1920)};
+  --container-padding-x: #{rem(20)};
+
+  --transition-duration: 0.2s;
+}

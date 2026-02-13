@@ -1,0 +1,117 @@
+@use '../helpers' as *;
+
+.forest {
+  top: 0;
+  z-index: 20000;
+
+  img {
+    position: absolute;
+  }
+
+  &__sky {
+    aspect-ratio: 16/9;
+    top: 0;
+    left: 0;
+  }
+
+  &__cloud-1 {
+    width: rem(700);
+    left: 0;
+    top: 0;
+  }
+  &__cloud-2 {
+    @include abs-center;
+
+    width: rem(600);
+    top: 20%;
+  }
+  &__cloud-3 {
+    top: 30%;
+    right: 0;
+  }
+  &__cloud-4 {
+    right: 10%;
+    top: 0;
+  }
+
+  &__forest {
+    height: 120vh;
+    left: 0;
+    bottom: 0;
+  }
+
+  &__fox {
+    bottom: 0;
+    left: -8%;
+    width: rem(700);
+  }
+  &__fox-text {
+    bottom: rem(320);
+    left: rem(370);
+    width: rem(350);
+    aspect-ratio: 350/161;
+    transform-origin: 30% bottom;
+
+    span {
+      @include abs-center;
+
+      color: var(--color-dark);
+      white-space: nowrap;
+      top: 45%;
+      font-size: rem(22);
+    }
+  }
+
+  &__valentine:hover ~ &__background {
+    backdrop-filter: blur(4px) brightness(0.7);
+  }
+
+  &__valentine {
+    @include abs-center;
+    @include flex-center();
+
+    width: 30vw;
+    aspect-ratio: 960/885;
+    perspective: 2000px;
+    z-index: 1;
+  }
+
+  &__heart-outside {
+    transform-style: preserve-3d;
+    transition-duration: 0.4s;
+    transform-origin: left center;
+
+    .face .backface {
+      position: absolute;
+      top: 0;
+      left: 0;
+      backface-visibility: hidden;
+    }
+
+    .face {
+      backface-visibility: hidden;
+      z-index: 2;
+    }
+    .backface {
+      transform: rotateY(180deg);
+      z-index: 1;
+    }
+
+    &.is-open {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  &__text {
+    font-size: rem(32);
+    color: var(--color-dark);
+    z-index: 1;
+    margin-bottom: rem(180);
+    transform-origin: 30% bottom;
+  }
+
+  &__background {
+    inset: 0;
+    transition-duration: 1s;
+  }
+}
