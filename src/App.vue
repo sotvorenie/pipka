@@ -142,6 +142,7 @@ onMounted(async() => {
   checkWidth()
 
   window.addEventListener('scroll', () => {
+    console.log('привет')
     handleScroll()
   })
 
