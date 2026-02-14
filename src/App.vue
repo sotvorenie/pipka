@@ -142,13 +142,7 @@ onMounted(async() => {
   checkWidth()
 
   window.addEventListener('scroll', () => {
-    if (!ticking) {
-      requestAnimationFrame(() => {
-        handleScroll()
-        ticking = false
-      })
-    }
-    ticking = true
+    handleScroll()
   })
 
   window.addEventListener('resize', () => {
