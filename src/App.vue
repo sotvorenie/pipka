@@ -181,40 +181,40 @@ const closeAbout = () => {
 
   <Empty class="position-fixed" v-else-if="!isLoading && emptyVisible"/>
 
-<!--  <main class="main position-relative" v-else>-->
-<!--    <div class="main__sticky h-100-vh position-sticky overflow-hidden">-->
+  <main class="main position-relative" v-else>
+    <div class="main__sticky h-100-vh position-sticky overflow-hidden">
 
-<!--      <About v-show="visibleAbout"-->
-<!--             @open="visibleMusic = false"-->
-<!--             @close="closeAbout"-->
-<!--      />-->
+      <About v-show="visibleAbout"
+             @open="visibleMusic = false"
+             @close="closeAbout"
+      />
 
-<!--      <KeepAlive>-->
-<!--        <Music v-show="visibleMusic"-->
-<!--               @open="visibleAbout = false"-->
-<!--               @close="closeMusic"-->
-<!--        />-->
-<!--      </KeepAlive>-->
+      <KeepAlive>
+        <Music v-show="visibleMusic"
+               @open="visibleAbout = false"
+               @close="closeMusic"
+        />
+      </KeepAlive>
 
-<!--      <Space class="z-10"/>-->
+      <Space class="z-10"/>
 
-<!--      <div class="main__white z-100" ref="mainWhiteRef"></div>-->
+      <div class="main__white z-100" ref="mainWhiteRef"></div>
 
-<!--      <Donat class="z-1000"-->
-<!--             v-if="donatVisible"-->
-<!--             :visible-dots-number="donatDotsNumber"-->
-<!--             :text-scale="donatTextScale"-->
-<!--             :loading-translate="donatLoadingTranslate"-->
-<!--             :finger-position="donateFingerPosition"-->
-<!--      />-->
+      <Donat class="z-1000"
+             v-if="donatVisible"
+             :visible-dots-number="donatDotsNumber"
+             :text-scale="donatTextScale"
+             :loading-translate="donatLoadingTranslate"
+             :finger-position="donateFingerPosition"
+      />
 
-<!--      <Forest v-show="forestVisible" :scroll="forestProgress"/>-->
+      <Forest v-show="forestVisible" :scroll="forestProgress"/>
 
-<!--      <Ozon v-show="ozonVisible"-->
-<!--            :scroll-progress="ozonProgress"-->
-<!--      />-->
+      <Ozon v-show="ozonVisible"
+            :scroll-progress="ozonProgress"
+      />
 
-<!--    </div>-->
-<!--  </main>-->
+    </div>
+  </main>
 
 </template>
